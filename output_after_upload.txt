@@ -1,0 +1,23 @@
+openai api fine_tunes.create -t my-training-test_prepared.jsonl -m davinci --suffix "EthHackathon event"
+Upload progress: 100%|████████████████████████| 1.50k/1.50k [00:00<00:00, 667kit/s]
+Uploaded file from my-training-test_prepared.jsonl: file-aUkcPbTysNPjJKt5zLhoVd1P
+Created fine-tune: ft-06IUJ3OXHPDDE4Dv9cCLycM8
+Streaming events until fine-tuning is complete...
+
+(Ctrl-C will interrupt the stream, but not cancel the fine-tune)
+[2023-01-01 18:20:18] Created fine-tune: ft-06IUJ3OXHPDDE4Dv9cCLycM8
+[2023-01-01 18:21:21] Fine-tune costs $0.03
+[2023-01-01 18:21:21] Fine-tune enqueued. Queue number: 0
+[2023-01-01 18:21:22] Fine-tune started
+[2023-01-01 18:22:49] Completed epoch 1/4
+[2023-01-01 18:22:54] Completed epoch 2/4
+[2023-01-01 18:22:59] Completed epoch 3/4
+[2023-01-01 18:23:04] Completed epoch 4/4
+[2023-01-01 18:24:16] Uploaded model: davinci:ft-personal:ethhackathon-event-2023-01-01-21-24-16
+[2023-01-01 18:24:17] Uploaded result file: file-ARPpG5WBtFcTFuhXtVwjU21o
+[2023-01-01 18:24:17] Fine-tune succeeded
+
+Job complete! Status: succeeded 🎉
+Try out your fine-tuned model:
+
+openai api completions.create -m davinci:ft-personal:ethhackathon-event-2023-01-01-21-24-16 -p <YOUR_PROMPT>
